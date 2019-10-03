@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Copyright>2018-2019 The Quras Project</Copyright>
+    <AssemblyTitle>Neo.Compiler.JVM</AssemblyTitle>
+    <Version>1.0.1</Version>
+    <Authors>The Quras Project</Authors>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <AssemblyName>quras-java-compiler</AssemblyName>
+    <PackageId>Quras.Compiler.JVM</PackageId>
+    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+    <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
+    <RootNamespace>Quras.Compiler</RootNamespace>
+    <Company>The Quras Project</Company>
+    <Product>Quras.Compiler.JVM</Product>
+    <Description>Quras.Compiler.JVM</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>RELEASE;NETCOREAPP1_1</DefineConstants>
+    <DebugType>none</DebugType>
+    <DebugSymbols>False</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SharpZipLib.NETStandard" Version="0.86.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Quras.VM">
+      <HintPath>..\depends\Quras.VM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
